@@ -1,0 +1,173 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body{
+	background-color: #6cae17;
+}
+footer{
+ margin-top:10px;
+}
+a{
+	color:#005aff;
+	
+	white-space: initial;
+
+  word-wrap: break-word;
+}
+
+.container{
+	max-width: 980px;
+}
+code{
+	max-width:100%;
+
+	white-space: initial;
+
+  word-wrap: break-word;
+}
+
+.headimg{
+
+	padding-left: 0px;
+
+	padding-right: 0px;
+}
+.headimg img{
+	width: 100%;
+}
+
+
+.full{
+	width: 100%;
+}
+
+.brown{
+	background-color: #5d3f2c;
+}
+.brown .container{
+	background-color: #b9e271;
+	color:#f6d6c9;
+}
+
+.red .container{
+	background-color: #ce4e16;
+	color:#f6d6c9;
+}
+.red{
+	background-color:#8c340d;
+}
+.red h1,.red h2,.red h3,.red h4,.red h5{
+	color:#f9f0ec;
+}
+
+.greenbg{
+	background-color:#679e20;
+	color:#FDFFF7;
+}
+.greenbg .container{
+	background-color:#b9e271;
+}
+.greenbg h2{
+	color:#FDFFF7;
+}
+
+.blue{
+	background-color: #48abd4;
+	
+}
+.blue .container{
+	background-color: #8bd4f2;
+	
+}
+.headimg img{
+	min-height:100px;
+}
+.headimg .headline{
+	position: absolute;
+	top: 0px;
+	left: 15px;
+	color:#FDFFF7;
+	font-weight:normal;
+}
+.headimg .headline h1{
+	font-weight:normal;
+}
+
+.headimg .description{
+	/*position: absolute;
+	bottom: 2px;
+	left: 15px;*/
+
+	margin-left: 15px;
+	color:#5d3f2c;
+	font-weight: normal;
+	font-size: 1em;
+}
+
+.demoframe{
+	width: 100%;
+
+	height: 700px;
+	overflow: hidden;
+}
+
+.smButton{
+	cursor:pointer;
+}
+
+
+ol li{
+	position: relative;
+	display: block;
+	padding: .4em .4em .4em 2em;
+	margin: .5em 0 22px;
+	color: #444;
+	text-decoration: none;
+	border-radius: .3em;
+	transition: all .3s ease-out;
+	line-height: 25px;
+}
+ol{
+	counter-reset: li;
+	list-style: none; 
+	font: 15px 'trebuchet MS', 'lucida sans';
+	padding: 0;
+	/*margin-bottom: 4em;*/
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+ol{
+	margin: 20px 0 0 2em;
+}
+
+ol li:hover{
+	text-decoration: none;
+	cursor:default;
+}
+
+ol li:hover:before{
+    transform: rotate(360deg);	
+}
+
+ol li:before{
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;	
+	left: -1.3em;
+	top: 22px;
+	margin-top: -1.3em;
+	background: #87ceeb;
+	height: 2em;
+	width: 2em;
+	line-height: 40px;
+	border: .2em solid #FFF;
+	text-align: center;
+	font-weight: bold;
+	font-size:25px;
+	
+	border-radius: 2em;
+	transition: all .3s ease-out;
+}

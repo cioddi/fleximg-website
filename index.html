@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>fleximg.js - Responsive image loader - Automatically resizes image files to fit the desired display dimensions</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="dist/all.css">
+
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+   <!--  <div class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">fleximg.js</a>
+        </div>
+      </div>
+    </div> -->
+<div class="full brown">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 headimg">
+         
+        <img data-src="/img/diagram.png" alt="">
+            <div class="headline">
+                <h1>fleximg.js</h1>
+            </div>
+            <div class="description">
+<p>Responsive image loader <br>Automatically resizes image files to fit the desired display dimensions</p>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="full greenbg">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+            <h2>Download</h2>
+
+
+            <div id="downloadLink" class="btn btn-lg btn-primary">Download</div>
+
+
+            <h2>Share</h2>
+
+            
+            <img data-smshare="twitter" class="smButton" src="/img/webicons/webicon-twitter.svg" width="50" alt="">
+            <img data-smshare="googleplus" class="smButton" src="/img/webicons/webicon-googleplus.svg" width="50" alt="">
+            <img data-smshare="facebook" class="smButton" src="/img/webicons/webicon-facebook.svg" width="50" alt="">
+            <img data-smshare="reddit" class="smButton" src="/img/webicons/webicon-reddit.svg" width="50" alt="">
+            <img data-smshare="pocket" class="smButton" src="/img/webicons/webicon-pocketapp.svg" width="50" alt="">
+
+            <h2>Test status</h2>
+
+            <p><a href="https://travis-ci.org/cioddi/fleximg.js"><img src="https://travis-ci.org/cioddi/fleximg.js.png" alt="Build Status" style="max-width:100%;"></a></p>
+
+            <p><a href="https://saucelabs.com/u/fleximg"><img src="https://saucelabs.com/browser-matrix/fleximg.svg" alt="Selenium Test Status" style="max-width:100%;"></a></p>
+
+            <h2>Donate</h2>
+            <p>If you are donating in crypto currency send us a message to let us know where the money comes from.</p>
+            
+            <b>Gittip:</b><br>
+            <script data-gittip-username="cioddi" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
+            <br><br>
+            <b>Bitcoin:</b><br>
+            <img src="/img/bitcoin_donate.png" width="150" alt=""><br>
+            187UAL486iogK3xbGN8BfajReEJUZboXfu
+            <br><br>
+
+            <b>Litecoin:</b><br>
+            <img src="/img/litecoin_donate.png" width="150" alt=""><br>
+            LPmd7vyUfpLrBQXFgM57vuMCE7dhZBc4yv
+            <br><br>
+        </div>
+      </div>
+    </div>
+
+</div>
+<div class="full red">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+            <h2>Demo</h2>
+
+            <iframe class="demoframe" src="http://fleximg.nettwurk.org/demos/scale.php" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+<div class="full blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+<h2>
+<a name="what" class="anchor" href="#what"><span class="octicon octicon-link"></span></a>What</h2>
+
+<h3>
+<a name="client" class="anchor" href="#client"><span class="octicon octicon-link"></span></a>Client</h3>
+
+<pre><code>collect all img tags that have "data-src" attribute set
+each
+    measure desired display dimensions
+    set the source of that img tag to a path that leads to the resized image
+
+</code></pre>
+
+<h3>
+<a name="server" class="anchor" href="#server"><span class="octicon octicon-link"></span></a>Server</h3>
+
+<pre><code>catch the request for that image file
+    if not image_file_exists
+        create a resized version of the original image
+
+    deliver it
+</code></pre>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>apache </li>
+<li>mod_rewrite</li>
+<li>PHP</li>
+<li>Imagemagick or GD lib</li>
+<li>jquery (only if you dont have it already, install using "$ bower install")</li>
+<li>jquery.hammer.js (to detect pinch zoom events "$ bower install" or download from <a href="https://github.com/EightMedia/hammer.js">here</a>)</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ol>
+<li><div id="downloadLink" class="btn btn-sm btn-primary">Download</div> fleximg.js <br>and unpack the zip to <code>[document_root]/lib/</code> on your server</li>
+<li>create the folder <code>[document_root]/img/fleximg_scale</code> on your server <br>and make sure its writable for the apache user</li>
+<li>
+<p>If you already have a .htaccess file (in <code>[document_root]/.htaccess</code>) put the following lines in after "RewriteEngine On" (make sure in this line <code>RewriteRule img/fleximg_scale/. /lib/fleximg/scale.php [L]</code> that <code>/lib/fleximg/scale.php</code> points to <code>scale.php</code> on your server)</p>
+
+<pre><code>RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule img/fleximg_scale/. /lib/fleximg/scale.php [L]
+</code></pre>
+</li>
+<li>
+<p>load the following script after jquery is loaded</p>
+<pre><code>&lt;script src="/lib/fleximg/fleximg.js.min.js"&gt;&lt;/script&gt;</code></pre>
+</li>
+<li>
+<p>init fleximg</p>
+
+<pre><code>&lt;script&gt;
+    scale.init();
+&lt;/script&gt;
+</code></pre>
+</li>
+</ol>
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li>Set the src of img tags to the data-src attribute and make sure to create style definition which affect the image dimension.</li>
+<li>After the page loads scale.js will be executed and check all img tags for data-src attributes. If found it will set the src of the img to <code>/img/fleximg_scale/{IMG_WIDTH}/{IMG_HEIGHT}/{IMG_FILEPATH}</code>.</li>
+<li>If that file exists it will be delivered by the apache. If there is no file the request will be passed to scale.php which will scale the image to the requested dimensions, save it to the desired path and redirect to it again.</li>
+</ol>
+
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+<div class="full red">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+<h2>
+<a name="client-options" class="anchor" href="#client-options"><span class="octicon octicon-link"></span></a>Client Options</h2>
+
+<h3>
+<a name="javascript-as-parameter-when-calling-scaleinitarray-options" class="anchor" href="#javascript-as-parameter-when-calling-scaleinitarray-options"><span class="octicon octicon-link"></span></a>Javascript as parameter when calling scale.init(Array options)</h3>
+
+<h4>
+<a name="steps-int" class="anchor" href="#steps-int"><span class="octicon octicon-link"></span></a>steps (int)</h4>
+
+<p>If the exact display size of is always roundet up so it can be evenly divided by the steps value to make the caching more efficient and prevent creating thousands of versions of one file.</p>
+
+<h4>
+<a name="fireonresize-bool" class="anchor" href="#fireonresize-bool"><span class="octicon octicon-link"></span></a>fireOnResize (bool)</h4>
+
+<p>Image sizes get readjusted on window resize event</p>
+
+<h4>
+<a name="fireonload-bool" class="anchor" href="#fireonload-bool"><span class="octicon octicon-link"></span></a>fireOnLoad (bool)</h4>
+
+<p>Image sizes get readjusted on page load</p>
+
+<h4>
+<a name="fireonpinchin-bool" class="anchor" href="#fireonpinchin-bool"><span class="octicon octicon-link"></span></a>fireOnPinchIn (bool)</h4>
+
+<p>... on Hammer.js pinchIn event</p>
+
+<h4>
+<a name="fireonpinchout-bool" class="anchor" href="#fireonpinchout-bool"><span class="octicon octicon-link"></span></a>fireOnPinchOut (bool)</h4>
+
+<p>... on Hammer.js pinchOut event</p>
+
+<h4>
+<a name="fireonpinch-bool" class="anchor" href="#fireonpinch-bool"><span class="octicon octicon-link"></span></a>fireOnPinch (bool)</h4>
+
+<p>... on Hammer.js pinch event</p>
+
+<h2>
+<a name="server-options" class="anchor" href="#server-options"><span class="octicon octicon-link"></span></a>Server Options</h2>
+
+<h3>
+<a name="php-as-parameter-when-calling-new-fleximgarray-options-in-scalephp" class="anchor" href="#php-as-parameter-when-calling-new-fleximgarray-options-in-scalephp"><span class="octicon octicon-link"></span></a>PHP as parameter when calling new Fleximg(Array options) in scale.php</h3>
+
+<h4>
+<a name="steps-int-1" class="anchor" href="#steps-int-1"><span class="octicon octicon-link"></span></a>steps (int)</h4>
+
+<p>Should be set to the same value as it is on the client side as a "security" feature to prevent the creation of thousand different sized version per image.</p>
+
+<h4>
+<a name="use_gdlib-bool" class="anchor" href="#use_gdlib-bool"><span class="octicon octicon-link"></span></a>use_gdlib (bool)</h4>
+
+<p>Make fleximg use gdlib instead of imagemagick</p>
+
+
+
+
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="full greenbg">
+    
+    <div class="container">
+      <footer>
+        <h2>MIT license</h2>
+        <p><b>&copy; Max Tobias Weber 2013</b></p>
+
+        <h4>additional copyright info</h4>
+
+<h5>
+<a name="assets" class="anchor" href="#assets"><span class="octicon octicon-link"></span></a>assets</h5>
+
+<p>img/test.jpg (2013 Loren Kerns <a href="http://www.flickr.com/photos/lorenkerns/9262656978/">http://www.flickr.com/photos/lorenkerns/9262656978/</a>)</p>
+      </footer>
+    </div>
+
+</div>
+<a href="https://github.com/cioddi/fleximg.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+
+        <script src="dist/fleximg-website.min.js"></script>
+
+
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-44948521-1', 'fleximg.com');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>

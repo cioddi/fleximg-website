@@ -1,0 +1,8 @@
+bower_components/*
+node_modules/*
+dist/*
+cssbuild/*
+build/*
+demos/*
+.DS_Store
+lib/*
