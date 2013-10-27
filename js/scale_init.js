@@ -1,2 +1,3 @@
-scale.init();
-setTimeout(scale.latestResizeRefresh,500);
+setTimeout(function() {
+  fleximg_js.init();
+}, 1);

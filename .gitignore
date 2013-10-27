@@ -4,5 +4,6 @@ dist/*
 cssbuild/*
 build/*
 demos/*
+img/fleximg_scale/*
 .DS_Store
 lib/*

@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           'dist/<%= pkg.name %>.min.js': [
           'lib/fleximg/bower_components/jquery/jquery.min.js',
           'lib/fleximg/bower_components/hammerjs/dist/jquery.hammer.js',
-          'lib/fleximg/scale.js',
+          'lib/fleximg/fleximg.js',
           'js/scale_init.js',
           'js/vendor/bootstrap.min.js',
           'js/main.js'
